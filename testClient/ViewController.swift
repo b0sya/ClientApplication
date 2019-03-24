@@ -8,36 +8,26 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate {
 
+class ViewController: UIViewController, UITextFieldDelegate {
+    
     //MARK: - Properties
     
     let login = "Bosya"
     let password = "12345"
     var authorCheckLogin = false
     var authorCheckPassword = false
+    let signInButton = SignInButton(color: UIColor(red:0.00, green:0.87, blue:0.88, alpha:1.0), title: "Вход")
     
     //MARK: - Outlets
     @IBOutlet weak var loginField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var signInlabel: UITextView!
-    @IBOutlet weak var signInButton: UIButton!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         loginField.placeholder = "Login"
         passwordField.placeholder = "Password"
-        loginField.delegate = self
-        passwordField.delegate = self
-        signInButton.layer.cornerRadius = 16
-        signInButton.layer.shadowColor = UIColor.black.cgColor
-        signInButton.layer.shadowOpacity = 0.4
-        signInButton.layer.shadowRadius = 6
-        signInButton.layer.shadowOffset = CGSize(width: 0.0, height: 3.0)
-        signInButton.layer.shouldRasterize = true
-        signInButton.addTarget(self, action: #selector(authorizationCheck), for: .touchUpInside)
-    
         
     }
     
@@ -56,7 +46,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         super.touchesBegan(touches, with: event)
     }
     
-    func textFieldShouldReturn (textField: UITextField)->Bool {
+    func textFieldShouldReturn (_ textField: UITextField)->Bool {
         textField.resignFirstResponder();
         return true
     }
@@ -83,4 +73,5 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
 }
+
 
