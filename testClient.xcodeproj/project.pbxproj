@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06AA458A2246EAAC00D6B936 /* SignInButtonClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06AA45892246EAAC00D6B936 /* SignInButtonClass.swift */; };
 		2B3DE0BB22463DBB004FEAB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3DE0BA22463DBB004FEAB6 /* AppDelegate.swift */; };
 		2B3DE0BD22463DBB004FEAB6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3DE0BC22463DBB004FEAB6 /* ViewController.swift */; };
 		2B3DE0C322463DBB004FEAB6 /* testClient.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2B3DE0C122463DBB004FEAB6 /* testClient.xcdatamodeld */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		06AA45892246EAAC00D6B936 /* SignInButtonClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInButtonClass.swift; sourceTree = "<group>"; };
 		2B3DE0B722463DBB004FEAB6 /* testClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B3DE0BA22463DBB004FEAB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B3DE0BC22463DBB004FEAB6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				2B3DE0C622463DBC004FEAB6 /* LaunchScreen.storyboard */,
 				2B3DE0C922463DBC004FEAB6 /* Info.plist */,
 				2B3DE0C122463DBB004FEAB6 /* testClient.xcdatamodeld */,
+				06AA45892246EAAC00D6B936 /* SignInButtonClass.swift */,
 			);
 			path = testClient;
 			sourceTree = "<group>";
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06AA458A2246EAAC00D6B936 /* SignInButtonClass.swift in Sources */,
 				2B3DE0BD22463DBB004FEAB6 /* ViewController.swift in Sources */,
 				2B3DE0C322463DBB004FEAB6 /* testClient.xcdatamodeld in Sources */,
 				2B3DE0BB22463DBB004FEAB6 /* AppDelegate.swift in Sources */,
