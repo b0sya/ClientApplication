@@ -1,15 +1,8 @@
-//
-//  SignInButton.swift
-//  testClient
-//
-//  Created by b0sya on 25.03.2019.
-//  Copyright © 2019 b0ysa. All rights reserved.
-//
-
 import UIKit
 
 class SignInButton : UIButton {
     var color: UIColor = .black
+    let cRadius = 16
     let touchDownAlpha: CGFloat = 0.3
     weak var timer : Timer?
     let timerStep: TimeInterval = 0.01
@@ -29,7 +22,7 @@ class SignInButton : UIButton {
         return (1 - touchDownAlpha) / CGFloat(animateTime / timerStep)
     }()
     
-    convenience init(color: UIColor? = nil, title: String? = nil) {
+    convenience init(color: UIColor?, title: String?) {
         self.init(type: .custom)
         
         if let color = color {
@@ -37,7 +30,7 @@ class SignInButton : UIButton {
         }
         
         if let title = title {
-            self.setTitle(title, for: .normal)
+            setTitle(title, for: .normal)
         }
         
         setup()
@@ -48,7 +41,7 @@ class SignInButton : UIButton {
         backgroundColor = .clear
         layer.backgroundColor = color.cgColor
         
-        layer.cornerRadius = 16
+        layer.cornerRadius = CGFloat(cRadius)
         clipsToBounds = true
     }
     
@@ -98,4 +91,3 @@ class SignInButton : UIButton {
     }
     
 }
-
