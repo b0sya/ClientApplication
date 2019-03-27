@@ -39,8 +39,11 @@
                                                 <state key="normal" title="Вход">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="signInAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="D6d-ys-sNf"/>
+                                                </connections>
                                             </button>
-                                            <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="aJ8-df-Inx">
+                                            <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Пароль" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="aJ8-df-Inx">
                                                 <rect key="frame" x="45.5" y="347" width="229" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="229" id="5Xp-MT-Sn2"/>
@@ -53,7 +56,7 @@
                                                     <action selector="passwordFieldAction:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="c7G-0e-Pqu"/>
                                                 </connections>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="YMb-pU-mt8">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="YMb-pU-mt8">
                                                 <rect key="frame" x="45.5" y="294" width="229" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="229" id="6Ak-VS-CmZ"/>
@@ -237,38 +240,65 @@
                                     <action selector="loginFieldAction:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="dfz-bd-f9a"/>
                                 </connections>
                             </textField>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jRt-tQ-exO" customClass="SignInButton" customModule="testClient" customModuleProvider="target">
+                                <rect key="frame" x="53" y="386" width="214" height="34"/>
+                                <color key="backgroundColor" red="0.0" green="0.86666666670000003" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="O9z-gk-lci"/>
+                                    <constraint firstAttribute="width" constant="214" id="dmJ-6Z-1TC"/>
+                                </constraints>
+                                <state key="normal" title="Зарегистрироваться">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="signUpAction:" destination="XZf-lP-e0F" eventType="touchUpInside" id="nBN-uN-yqj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="jRt-tQ-exO" firstAttribute="centerX" secondItem="yD5-v8-7V1" secondAttribute="centerX" id="1G8-wP-8jW"/>
                             <constraint firstItem="yD5-v8-7V1" firstAttribute="bottom" secondItem="3Zv-CP-inU" secondAttribute="bottom" constant="248" id="7gm-6j-D6S"/>
                             <constraint firstItem="3Zv-CP-inU" firstAttribute="top" secondItem="FWP-q7-sNd" secondAttribute="bottom" constant="25" id="8hm-1g-JoB"/>
+                            <constraint firstItem="jRt-tQ-exO" firstAttribute="top" secondItem="3Zv-CP-inU" secondAttribute="bottom" constant="66" id="Gkk-43-V5m"/>
                             <constraint firstItem="1fr-m5-yvu" firstAttribute="top" secondItem="FfH-wI-z1h" secondAttribute="bottom" constant="25" id="KBT-4q-If9"/>
                             <constraint firstItem="FWP-q7-sNd" firstAttribute="top" secondItem="1fr-m5-yvu" secondAttribute="bottom" constant="25" id="SAL-2P-EA3"/>
+                            <constraint firstItem="yD5-v8-7V1" firstAttribute="bottom" secondItem="jRt-tQ-exO" secondAttribute="bottom" constant="148" id="bIZ-93-ZYn"/>
                             <constraint firstItem="FfH-wI-z1h" firstAttribute="centerX" secondItem="yD5-v8-7V1" secondAttribute="centerX" id="bS4-Hx-VJP"/>
                             <constraint firstItem="1fr-m5-yvu" firstAttribute="centerX" secondItem="yD5-v8-7V1" secondAttribute="centerX" id="fEZ-HM-let"/>
                             <constraint firstItem="3Zv-CP-inU" firstAttribute="centerX" secondItem="yD5-v8-7V1" secondAttribute="centerX" id="qwp-Od-Mtf"/>
                             <constraint firstItem="FWP-q7-sNd" firstAttribute="centerX" secondItem="yD5-v8-7V1" secondAttribute="centerX" id="yDK-fv-AnL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="yD5-v8-7V1"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="HwE-T1-EIF" appends="YES" id="UiC-Yc-AXv"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Регистрация" id="a20-se-8Ir">
                         <barButtonItem key="leftBarButtonItem" systemItem="stop" id="rHt-Hm-qBp">
                             <connections>
-                                <segue destination="BYZ-38-t0r" kind="show" id="QOx-KN-iz1"/>
+                                <segue destination="BYZ-38-t0r" kind="presentation" id="UDp-G3-HQj"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="emailField" destination="1fr-m5-yvu" id="dMQ-c7-J01"/>
                         <outlet property="nameField" destination="FfH-wI-z1h" id="Jeb-j2-iGs"/>
+                        <outlet property="passConfirmField" destination="3Zv-CP-inU" id="Cm0-dl-jMX"/>
                         <outlet property="passwordField" destination="FWP-q7-sNd" id="s0q-HH-9KS"/>
-                        <outlet property="retrypassField" destination="3Zv-CP-inU" id="d78-ev-l98"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="signUptoHome" id="Qpf-31-H44"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qa3-6S-gVG" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="TTw-aL-zu1" userLabel="Exit" sceneMemberID="exit"/>
+                <tapGestureRecognizer id="HwE-T1-EIF">
+                    <connections>
+                        <action selector="tap:" destination="XZf-lP-e0F" id="mhl-VW-3a0"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1043" y="935"/>
+            <point key="canvasLocation" x="1022" y="935"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zy5-ho-4Yl">
@@ -292,4 +322,7 @@
     <resources>
         <image name="LaunchLogo" width="2041" height="2041"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Qpf-31-H44"/>
+    </inferredMetricsTieBreakers>
 </document>

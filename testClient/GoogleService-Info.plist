@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>930411140359-s87jqal477jep52vu89m7it6oth77tf0.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.930411140359-s87jqal477jep52vu89m7it6oth77tf0</string>
+	<key>API_KEY</key>
+	<string>AIzaSyB8882Sk7IjodKvfYcOR-Nh34e8vfsNJYQ</string>
+	<key>GCM_SENDER_ID</key>
+	<string>930411140359</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>myCompany.VectorWayConnect</string>
+	<key>PROJECT_ID</key>
+	<string>vectorway-client</string>
+	<key>STORAGE_BUCKET</key>
+	<string>vectorway-client.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:930411140359:ios:222c2db5c5c53cd9</string>
+	<key>DATABASE_URL</key>
+	<string>https://vectorway-client.firebaseio.com</string>
+</dict>
+</plist>

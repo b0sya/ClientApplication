@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Firebase
 
 class LogInViewController: UIViewController, UITextFieldDelegate{
     
@@ -37,12 +37,22 @@ class LogInViewController: UIViewController, UITextFieldDelegate{
         signInButton.backgroundColor = UIColor(red:0.00, green:0.87, blue:0.88, alpha:0.3)
         loginField.addTarget(self, action: #selector(checkActivSign), for: .allEvents)
         passwordField.addTarget(self, action: #selector(checkActivSign), for: .allEvents)
-        signInButton.addTarget(self, action: #selector(isAuthorized), for: .touchUpInside)
         registerForKeyboardNotifications()
     }
     
     //MARK: - Actions
     @IBAction func loginFieldAction(_ sender: Any) {
+    }
+    
+    @IBAction func signInAction(_ sender: Any) {
+        Auth.auth().signIn(withEmail: loginField.text!, password: passwordField.text!) { (user, error) in
+            if error == nil{
+                
+            }
+            else{
+                self.showAlert(title: "Error", message: error?.localizedDescription, style: .alert)
+            }
+        }
     }
     
     @IBAction func passwordFieldAction(_ sender: Any) {
@@ -95,7 +105,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate{
         }
     }
     
-    func showAlert(title: String?, message: String, style: UIAlertController.Style){
+    func showAlert(title: String?, message: String?, style: UIAlertController.Style){
         let alert = UIAlertController(title: title, message: message, preferredStyle: style)
         let actionOK = UIAlertAction(title: "Ok", style: .default) { (actionOk) in
             
