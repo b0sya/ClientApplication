@@ -124,7 +124,7 @@
                         <outlet property="regButton" destination="7Sv-M8-Xmy" id="odB-dV-q5N"/>
                         <outlet property="scrollView" destination="Y41-aX-dfy" id="WxO-bA-gPJ"/>
                         <outlet property="signInButton" destination="sXW-jh-SLL" id="CUl-W8-qkW"/>
-                        <segue destination="k3Z-X0-P64" kind="presentation" identifier="to_news" id="cff-XF-tXp"/>
+                        <segue destination="k3Z-X0-P64" kind="presentation" identifier="signInToNews" id="cff-XF-tXp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

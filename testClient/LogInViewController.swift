@@ -47,7 +47,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate{
     @IBAction func signInAction(_ sender: Any) {
         Auth.auth().signIn(withEmail: loginField.text!, password: passwordField.text!) { (user, error) in
             if error == nil{
-                
+                 self.performSegue(withIdentifier: "signInToNews", sender: self)
             }
             else{
                 self.showAlert(title: "Error", message: error?.localizedDescription, style: .alert)
