@@ -25,10 +25,13 @@ class LogInViewController: UIViewController, UITextFieldDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.setNavigationBarHidden(true, animated: false)
-        loginField.delegate = self
-        passwordField.delegate = self
-        loginField.placeholder = "Login"
-        passwordField.placeholder = "Password"
+        setupUiElems()
+        
+    }
+    
+    func setupUiElems(){
+        loginField.delegate = self //to go to the next field with the next keyboard button
+        passwordField.delegate = self // like loginField
         loginField.returnKeyType = UIReturnKeyType.next
         passwordField.returnKeyType = UIReturnKeyType.go
         signInButton.backgroundColor = UIColor(red:0.00, green:0.87, blue:0.88, alpha:0.3)
@@ -36,7 +39,6 @@ class LogInViewController: UIViewController, UITextFieldDelegate{
         passwordField.addTarget(self, action: #selector(checkActivSign), for: .allEvents)
         signInButton.addTarget(self, action: #selector(isAuthorized), for: .touchUpInside)
         registerForKeyboardNotifications()
-        
     }
     
     //MARK: - Actions
@@ -46,7 +48,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate{
     @IBAction func passwordFieldAction(_ sender: Any) {
     }
     
-    //MARK: - methods For Scroll With Keyboard
+    //MARK: - a methods that fixes overlap textField with keyboard
     func removeKeyboardNotifications(){
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
@@ -66,7 +68,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate{
         scrollView.contentOffset = CGPoint.zero
     }
     
-    //MARK:  methodsForHideKeyboard
+    //MARK:  methods to hide the keyboard
     @IBAction func tap(_ sender: Any) {
         loginField.resignFirstResponder()
         passwordField.resignFirstResponder()
