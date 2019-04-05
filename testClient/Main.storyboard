@@ -43,19 +43,6 @@
                                                     <action selector="signInAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="D6d-ys-sNf"/>
                                                 </connections>
                                             </button>
-                                            <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Пароль" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="aJ8-df-Inx">
-                                                <rect key="frame" x="45.5" y="347" width="229" height="30"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="229" id="5Xp-MT-Sn2"/>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="229" id="Jtb-Hw-PVi"/>
-                                                </constraints>
-                                                <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                                                <connections>
-                                                    <action selector="passwordFieldAction:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="c7G-0e-Pqu"/>
-                                                </connections>
-                                            </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="YMb-pU-mt8">
                                                 <rect key="frame" x="45.5" y="294" width="229" height="30"/>
                                                 <constraints>
@@ -77,6 +64,19 @@
                                                     <segue destination="0Ug-0X-unr" kind="show" id="KYg-9c-DS2"/>
                                                 </connections>
                                             </button>
+                                            <textField opaque="NO" tag="1" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Пароль" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="aJ8-df-Inx">
+                                                <rect key="frame" x="110" y="400" width="229" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="229" id="5Xp-MT-Sn2"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="229" id="Jtb-Hw-PVi"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                <connections>
+                                                    <action selector="passwordFieldAction:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="c7G-0e-Pqu"/>
+                                                </connections>
+                                            </textField>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <gestureRecognizers/>
